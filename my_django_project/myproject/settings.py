@@ -26,12 +26,13 @@ SECRET_KEY = 'django-insecure-t9glut#8@w17!ad7mn%_*%cu02anv7vbul#*)0x1^!j8k1f=se
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-65-1-65-216.ap-south-1.compute.amazonaws.com','65.1.65.216','one.vedanshbackend.xyz']
+ALLOWED_HOSTS = ['127.0.0.1','ec2-65-1-65-216.ap-south-1.compute.amazonaws.com','65.1.65.216','one.vedanshbackend.xyz','ec2-13-127-161-38.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "polls.apps.PollsConfig",
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,7 +46,7 @@ INSTALLED_APPS = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
